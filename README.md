@@ -11,8 +11,8 @@ We applied the deeplabv3 network to segment people inside an image. We extract t
 ## Setup
 
 ```
-cd $HOME
-git clone https://github.com/visiont3lab/segmentation_deeplab.git
+cd $HOME && \
+git clone https://github.com/visiont3lab/segmentation_deeplab.git && \
 echo "export SEGMENTATION_DEEPLAB=$HOME/segmentation_deeplab" >> $HOME/.bashrc && source $HOME/.bashrc
 ```
 
