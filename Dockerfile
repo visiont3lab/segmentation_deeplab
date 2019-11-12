@@ -44,11 +44,10 @@ RUN /bin/bash -c  "pip3 install numpy \
                     opencv-contrib-python"  
 			
 #------------------ TEXT RECOGNITION REQUIREMENTS 
-RUN /bin/bash -c  "pip3 install tensorflow-gpu=1.14"
+RUN /bin/bash -c  "pip3 install tensorflow-gpu==1.14"
 
-
-# docker build -t deep-learning:text_recognition .
-#xhost +local:docker &&  docker run --runtime=nvidia  --rm -it --name deep_learning_face_recognition  \
+# docker build -t deep-learning:segmentation_deeplab .
+#xhost +local:docker &&  docker run --runtime=nvidia  --rm -it --name deep_learning_segmentation_deeplab  \
 #--env="DISPLAY=$DISPLAY" --env="QT_X11_NO_MITSHM=1" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --device=/dev/video0  \
-#-v $HOME/visiont3lab-github/face_recognition:/root/home/ws bajibajang/deep-learning:text_recognition \
-# /bin/bash -c "cd /root/home/ws/algorithm/ && python3 custom_face_recognition.py"
+#-v $HOME/visiont3lab-github/face_recognition:/root/home/ws visiont3lab/deep-learning:text_recognition \
+# /bin/bash -c "cd /root/home/ws/ && python3 segmentation.py"

@@ -25,7 +25,7 @@ xhost +local:docker && \
         --env="DISPLAY=$DISPLAY" --env="QT_X11_NO_MITSHM=1" \
         --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --device=/dev/video0  \
         -v $SEGMENTATION_DEEPLAB:/root/home/ws \
-        visiont3lab/deep-learning:segmentation_deeplab \
+        deep-learning:segmentation_deeplab \
         /bin/bash -c "cd /root/home/ws/ && python3 segmentation.py"
 ```
 
